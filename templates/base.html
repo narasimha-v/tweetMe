@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Tweet Me {% block headTitle %} {% endblock headTitle %}</title>
+		<!-- Required meta tags -->
+		<meta charset="utf-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1, shrink-to-fit=no"
+		/>
+		<meta name="theme-color" content="#000000" />
+
+		<!-- Bootstrap CSS -->
+		<link
+			rel="stylesheet"
+			href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+			integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+			crossorigin="anonymous"
+		/>
+
+		{% include 'react/css.html' %}
+
+		<style>
+			.bg-tweetme {
+				background-color: #0093e9;
+				background-image: linear-gradient(160deg, #0093e9 0%, #80d0c7 100%);
+			}
+		</style>
+	</head>
+
+	<body>
+		<noscript>You need to enable JavaScript to run this app.</noscript>
+		{% include "components/navbar.html" %}
+		<div class="container">
+			{% block content %} {% endblock content %}
+		</div>
+		<!-- Optional JavaScript -->
+		{% include 'react/base_embed.html' %} {% include 'react/js.html' %}
+		<!-- Sweet alert -->
+		<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+	</body>
+</html>
